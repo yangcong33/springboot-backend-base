@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Spring Boot Backend Base
 
 ## 项目介绍
@@ -47,6 +46,4 @@ mvn spring-boot:run
 
 
 =======
-# springboot-backend-base
-init spring boot project skeleton.
->>>>>>> 16386ea1d3f3a2b970a437cff0a021c1f077895c
+

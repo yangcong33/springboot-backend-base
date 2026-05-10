@@ -369,7 +369,18 @@ error: 无法推送一些引用到 'https://github.com/yangcong33/springboot-bac
 3. `git log`
 4. 再次尝试，拉取远程并合并：`git pull origin main --allow-unrelated-histories -v`
 5. 成功后可以，push上传了 `git push -u origin main` -u 是 --set-upstream（设置上游）的缩写.
+
+6. commit 提交修改 `git commit --amend -m "解决 README.md 合并冲突，保留本地修改"`
+7. 重新提交，push 最后完成。
 ---
+
+## 细节 | 纠错 | 
+最后发现用户信息中的用户名拼写错误。需要调整：
+0. 修改用户信息
+1. 直接本地配置用户信息修改 `git commit --amend --reset-author --no-edit`，用的是commit所以先执行2再1
+2. 需要 add 到缓存区
+3. 需要提交到本地（第一步已做）
+4. 最后可以提交到 push远程仓库
 
 README 是后面作品集包装的起点，从第一天就开始维护会很加分。
 
