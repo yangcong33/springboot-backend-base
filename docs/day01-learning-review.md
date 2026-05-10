@@ -297,6 +297,7 @@ error: 您对下列文件的本地修改将被合并操作覆盖：
 ```
 
 
+
 ## 网络问题-GitHub
 问题：
 ```bash
@@ -349,6 +350,25 @@ error: 您对下列文件的本地修改将被合并操作覆盖：
 正在终止
 ```
 
+##  执行` git push -u origin main` wenti问题出现
+```bash
+(base) wj@dqgc-HP-Z4-G4-Workstation:~/Jacob_private_space/hello/agent/springboot-backend-base$ git push -u origin main
+To https://github.com/yangcong33/springboot-backend-base.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: 无法推送一些引用到 'https://github.com/yangcong33/springboot-backend-base.git'
+提示：更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支。
+提示：再次推送前，先与远程变更合并（如 'git pull ...'）。详见
+提示：'git push --help' 中的 'Note about fast-forwards' 小节。
+```
+**解决与分析**：本地文件夹里，目前已经有一个 README.md 文件了，但是做了修改忘记添加并提交到本地仓库。（还没有把它 commit（提交）保存下来。）
+1. `git status`
+2. `git add .` && `git commit -m "commit reame.md && day01-notes"`
+>[main 3688511] commit reame.md && day01-notes
+>2 files changed, 288 insertions(+), 2 deletions(-)
+
+3. `git log`
+4. 再次尝试，拉取远程并合并：`git pull origin main --allow-unrelated-histories -v`
+5. 成功后可以，push上传了 `git push -u origin main` -u 是 --set-upstream（设置上游）的缩写.
 ---
 
 README 是后面作品集包装的起点，从第一天就开始维护会很加分。
