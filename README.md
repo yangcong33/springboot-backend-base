@@ -1,6 +1,33 @@
-#
+# Spring Boot Backend Base
 
-## 项目骨架搭建
+## 项目介绍
+
+这是一个用于后续学习 Spring AI、RAG、Agent 工程的 Spring Boot 后端基础框架。
+
+当前阶段先完成通用后端工程底座，后续会逐步接入：
+
+- Spring AI
+- 企业知识库 RAG
+- Tool Calling
+- Agent
+- Python 模型服务
+- Docker Compose 部署
+
+## 技术栈
+
+- Java 17/21
+- Spring Boot 3.x
+- Spring Web
+- Spring Validation
+- Spring Boot Actuator
+- Maven
+
+## 本地启动
+
+```bash
+mvn spring-boot:run
+
+##  项目骨架搭建
 `# 创建层级目录 mkdir -p ~/hello/agent/springboot-backend-base `
 `# 进入项目根目录cd ~/hello/agent/springboot-backend-base  `
 ## 文档工作流
