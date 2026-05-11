@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class HelloController {
 
-    @GetMapping("/health")
+    @GetMapping("/actuatorHealth")
     public String  actuatorHealth(){
 
         return "{\"status\": \"ok\", \"msg\": \"sry,tsk\"}";
